@@ -3,6 +3,14 @@
 Wireframe
 ![MG Wireframe 1](https://media.git.generalassemb.ly/user/48637/files/f4f61683-bdc6-4616-8f45-5cabd9550cf9)
 
+Technologies Used
+1. CSS
+2. JS
+3. HTML
+4. Emoji Library
+5. Wikimedia Commons
+6. CSS library (potentially)
+
 pseudocode
 1. Store media sources: background (wikimedia commons), emoji for win/lose responses (open source, emoji library)
 2. Display game name in header, general 'how the game is played' in subheading, background media and 'play' button
@@ -19,3 +27,9 @@ pseudocode
 6. Display button 'Want to play again?'
   . Click resets and restarts game
   
+Icebox
+  . Add more levels: more numbers to remember and less time on the countdown clock
+  . Better graphics
+  . Ability to play against others
+  . Option to get clues
+  . Ability to keep track of wins overtime
