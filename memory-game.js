@@ -2,23 +2,25 @@
 onClick(btn.play)
 
     const frontOfCard = document.querySelector('.frontOfCard')
-    frontOfCard.innerHTML = ''
-    // Create an empty array for 5 items
-    var fiveRanInt = []
-    // Start a loop and run it 5 times
-    for(i = 0; i < 5; i++) {
-        const card = document.createElement(p)
-        fiveRandInt[i] = Math.floor( Math.random() * 999 )
-        card.textContent = 
-        }
-        frontOfCard.appendChild(card)
+    const timer = document.querySelector('#timer')
+    function generateNums () {
+        frontOfCard.innerHTML = ''
+        // Create an empty array for 5 items
+        var fiveRandInt = []
+        // Start a loop and run it 5 times
+        for(i = 0; i < 5; i++) {
+            const card = document.createElement(p)
+            fiveRandInt[i] = Math.floor( Math.random() * 999 )
+            card.textContent = fiveRandInt
+            }
+            frontOfCard.appendChild(card)
+            console.log(fiveRandInt)
+    }
+  
     // Use the index of the loop to assign the random number to that index of the array
 
         // flip card
-
-        // start timer
-        const timer = document.querySelector('#timer')
-     // console.log("this is the timer" , timer)
+    function startTimer () {
         timer.innerHTML = ''
 
         let i = 10
@@ -35,6 +37,10 @@ onClick(btn.play)
             timer.appendChild(para)
             i--;
         }
+    }
+        // start timer
+
+     // console.log("this is the timer" , timer)
 
 onClick(btn.checkPlayerAns)
 onClick(btn.playAgain) 
