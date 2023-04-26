@@ -41,7 +41,7 @@ Pseudocode
 
 Variables
   card: front and back
-  timer: endOfTimer, setInterval, totalTime, seconds
+  timer: endOfTimer, setInterval, startTime, seconds
 
 Buttons
   Play!, Did you get them right? Play Again
