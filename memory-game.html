@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Do You Remember?</title>
+    <title>Numbers Memory Game</title>
     <link href="memory-game.css" rel="stylesheet" type="text/css" />
     <link href="../assets/smirking_emoji"/>
     <link href="../assets/nerd_emoji"/>
@@ -12,11 +12,10 @@
   
   </head>
   <body>
-    <header>"Do You Remember?"</header>
+    <header style="background-color: rgb(65, 48, 219)">"Do You Remember?"</header>
 
         <button id="startGameBtn">Play!</button>
       <p id="msg">1st instructions</p>
-        <button id="playAgainBtn">Play again</button>
 <div class="flipIntCard">
         <div class="cardInner">
           <div class="frontOfCard">
@@ -26,14 +25,9 @@
         </div>
 </div>
 <div id="timer"></div> 
-    <input id="playerAnswer" />
+    <input id="playerAnswer"/>
     <button id="checkPlayAnsBtn">Did you get them right?</button>
-    <script>
-      function acceptPlayerInput() {
-        const PlayerInput = document.querySelector('playerAnswer');
-        const answer = playerInput.numbers;
-      }
-    </script>
+    <button id="playAgainBtn">Play again</button>
   </body>
 </html> 
 

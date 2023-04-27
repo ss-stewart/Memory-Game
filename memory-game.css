@@ -1,26 +1,37 @@
-.btn {
-    border: none;
-    color: white; 
-    background: orange
-    padding: 0px 0px; /* Add padding */
-    cursor: pointer; 
-    .btn:hover {
-    transform: scale(1.2) 
-    }
-    text-align: center
-}
-    
-header {
-    color: olivedrab;
-    background-color: whitesmoke
-    padding: 50px 10px;
+button {
+    color: orange; 
+    background-color: white;
+    padding: 8px 30px;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: bolder;
     text-align: center;
+    cursor: pointer; 
+    hover {
+    transform: scale(1.2)
+    background-color: rgb(255, 132, 0); 
+  }
+    }
+
+body {
+  background-color:rgb(27, 138, 248);
+}
+
+header {
+    color: orange;
+    background-color: rgb(65, 48, 219)
+    padding: 100px;
+    margin: auto;
+    font-size: 90px;
+    font-weight: bolder;
+    text-align: center;
+    border: blue;
 }
 
 div {
     display: inline-block;
 }
-_______________________________________________
+
 .flip-card {
     background-color: pink;
     width: 100px;
@@ -49,5 +60,3 @@ _______________________________________________
     transform: rotateY(180deg);
     border: black;
   }
-
-  ------------------------------------------------------
