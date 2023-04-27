@@ -3,6 +3,9 @@
 Wireframe
 ![MG Wireframe 1](https://media.git.generalassemb.ly/user/48637/files/f4f61683-bdc6-4616-8f45-5cabd9550cf9)
 
+Finished Game display
+
+
 Numbers Memory Game
   The game allows players to test and build their memory retention, with a fun feel. The game presents users with a set of five random numbers that they must remember in their order before a displayed timer runs out. At the end of the timer, the cards flips so that the numbers are no longer visible. The user is then prompted to enter the numbers as they recall them and then check to see how accurate they were. The game will then display a message, letting the player know how well they did, along with the option to play again.
 

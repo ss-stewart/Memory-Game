@@ -1,62 +1,92 @@
 button {
-    color: orange; 
-    background-color: white;
-    padding: 8px 30px;
-    border-radius: 12px;
-    font-size: 20px;
-    font-weight: bolder;
-    text-align: center;
-    cursor: pointer; 
-    hover {
-    transform: scale(1.2)
-    background-color: rgb(255, 132, 0); 
-  }
-    }
+  color: rgb(231, 162, 90); 
+  background-color: white;
+  padding: 30px 80px;
+  border-radius: 50px;
+  font-size: 30px;
+  font-weight: bolder;
+  text-align: center;
+  margin: 20px;
+  background-position: auto;
+  cursor: pointer; 
+  transform: scale(1.2);
+  background-color: rgb(131, 31, 189); 
+}
 
 body {
-  background-color:rgb(27, 138, 248);
+  background-color:rgb(222, 201, 246);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
 }
 
 header {
-    color: orange;
-    background-color: rgb(65, 48, 219)
-    padding: 100px;
-    margin: auto;
-    font-size: 90px;
-    font-weight: bolder;
-    text-align: center;
-    border: blue;
+  color: rgb(231, 162, 90);
+  padding: 100px;
+  margin: auto;
+  font-size: 90px;
+  font-weight: bolder;
+  text-align: center;
+  border: blue;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 div {
-    display: inline-block;
+  display: center;
+  margin: auto;
 }
 
-.flip-card {
-    background-color: pink;
-    width: 100px;
-    height: 50px;
-    border: 1px solid black;
-  }
+/* Keep card in place*/
+.flip-container {
+  perspective: 1000;
+  /* IS SOMETHING WRONG HERE? */
+}
 
-.cardInner {
-    transform: rotateY(180deg);
-  }
- 
-  .frontOfCard, .backOfCard {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .frontOfCard {
-    background-color: whitesmoke;
-    color: black;
-    border-color: orange;
-  }
-  
-  .backOfCard {
-    background-color: whitesmoke;
-    transform: rotateY(180deg);
-    border: black;
-  }
+.flip-container, .cardFront, .cardBack {
+  width: 300px;
+  height: 50px;
+}
+
+/* flip specs */
+.flipStyle {
+  transition: 0.5s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+/* keep one side visible at a time */
+.cardFront, .cardBack {
+  backface-visibility: hidden;
+  position: absolute; 
+}
+
+/* front pane, placed above back */
+.cardFront {
+  display: flex;
+}
+
+/* back is hidden until timer is up */
+.cardBack {
+  transform: rotateY(180deg);
+  background-color: black;
+  color: black;
+  z-index: -2;
+}
+
+#playerAnswer {
+  color: blue;
+  border-color: orange;
+  height: 50px;
+  width: 400px;
+  font-size: medium;
+  padding: auto;
+  position: center;
+}
