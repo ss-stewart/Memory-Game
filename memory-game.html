@@ -13,19 +13,27 @@
   </head>
   <body>
     <header>"Do You Remember?"</header>
-        <button class="btn startGame" onClick="generateNums(); startTimer()">Play!</button>
-        <button class="btn checkPlayAns">Did you get them right?</button>
-        <button class="btn playAgain">Play again</button>"
+
+        <button id="startGameBtn">Play!</button>
+      <p id="msg">1st instructions</p>
+        <button id="playAgainBtn">Play again</button>
 <div class="flipIntCard">
         <div class="cardInner">
           <div class="frontOfCard">
-            randInt 1 here 
           </div>
           <div class="backOfCard">
           </div>
         </div>
 </div>
 <div id="timer"></div> 
+    <input id="playerAnswer" />
+    <button id="checkPlayAnsBtn">Did you get them right?</button>
+    <script>
+      function acceptPlayerInput() {
+        const PlayerInput = document.querySelector('playerAnswer');
+        const answer = playerInput.numbers;
+      }
+    </script>
   </body>
 </html> 
 

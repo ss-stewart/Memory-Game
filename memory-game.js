@@ -1,13 +1,23 @@
-// games starts when btn.play is clicked
+// games starts when play is clicked
+const frontOfCard = document.getElementsByClassName("frontOfCard")
+const card = document.createElement('p')
+const timer = document.querySelector('#timer')
+const instructionMsg = document.getElementById("msg")
+const startButton = document.getElementById('startGameBtn');
+
+// EVENT LISTENERS
+startButton.addEventListener('click', handleClick);
+
+// how to change instruction msg (if ... write the following code)
+// instructionMessage.innerHTML = "new message"
+
+
 init ()
 function init () {
-
+    instructionMsg.style.display = "none"
 }
-
-    const frontOfCard = document.getElementsByClassName("frontOfCard")
-    const card = document.createElement('p')
-    const timer = document.querySelector('#timer')
     function generateNums () {
+        instructionMsg.style.display = "block"
         frontOfCard.innerHTML = ''
         // Create an empty array for 5 items
         var fiveRandInt = []
@@ -25,24 +35,42 @@ function init () {
 
         // flip card
 
-    function startTimer () {
-        timer.innerHTML = ''
+        function handleClick() {
+            // Start the timer
+            let seconds = 10;
+            let intervalId = setInterval(function() {
+                timer.innerHTML = `Timer: ${seconds}s`
+                seconds--;
+              if (seconds < 0) {
+                clearInterval(intervalId);
+                timer.innerHTML = 'Time is up!';
+              }
+            }, 1000);
+            
+            generateNums();
+          }    
+    // function startTimer () {
+    //     timer.innerHTML = ''
 
-        let i = 10
+    //     let i = 10
 
-        while (i >= 0) {
-            const para = document.createElement('p')
-            if (i === 10) {
-                para.textContent = `Countdown ${i}`
-            } else if (i<10 && i>0) {
-                para.textContent = i
-            } else {
-                para.textContent = "Time's up!"
-            }
-            timer.appendChild(para)
-            i--;
-        }
-    }
+    //     while (i >= 0) {
+    //         const para = document.createElement('p')
+    //         if (i === 10) {
+    //             para.textContent = `Countdown ${i}`
+    //         } else if (i<10 && i>0) {
+    //             para.textContent = i
+    //         } else {
+    //             para.textContent = "Time's up!"
+    //         }
+    //         timer.appendChild(para)
+    //         i--;
+    //     }
+    // }
+
+    // 
+
+
         // start timer
 
      // console.log("this is the timer" , timer)
