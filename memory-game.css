@@ -23,8 +23,8 @@ div {
 _______________________________________________
 .flip-card {
     background-color: pink;
-    width: 80px;
-    height: 10px;
+    width: 100px;
+    height: 50px;
     border: 1px solid black;
   }
 
