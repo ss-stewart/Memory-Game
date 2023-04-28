@@ -7,7 +7,7 @@ const startButton = document.getElementById('startGameBtn');
 const restartButton = document.getElementById('playAgainBtn');
 const checkAnsButton = document.getElementById('checkPlayAnsBtn');
 const gameNumbers = '';
-const playerInput = document.querySelector('#playerAnswer');
+const playerInput = document.querySelector('#playerAnswer').value;
 
 // EVENT LISTENERS
 startButton.addEventListener('click', init);
@@ -30,9 +30,7 @@ function generateNums () {
     for(i = 0; i < 5; i++) {
         fiveRandInt[i] = Math.floor( Math.random() * 99);
     }
-    gameNums.textContent = 'Remember these numbers in the order they appear: ' + fiveRandInt;
-    console.log(fiveRandInt);        
-    console.log(cardFront);
+    gameNums.textContent = 'Remember these numbers in the order they appear: ' + fiveRandInt;       
 }
 
 // Start the timer; when timer ends, alert player
