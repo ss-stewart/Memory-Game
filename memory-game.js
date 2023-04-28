@@ -29,7 +29,7 @@ function generateNums () {
     for(i = 0; i < 5; i++) {
         fiveRandInt[i] = Math.floor( Math.random() * 99);
     }
-    gameNums.textContent = 'Remember these numbers in the order they appear: ' + fiveRandInt;       
+    gameNums.textContent = fiveRandInt;       
 }
 
 // Start the timer; when timer ends, alert player
@@ -48,15 +48,14 @@ function startTimer() {
 
 // Allow player to check their answer using a button
     // display conditional message to tell player how they did    
-function compareNums() {
-    let playerInputArr = [playerInput];
-    console.log('this is player nums', playerInput)
-    compare = (x, y) => playerInputArr.reduce((x, z) => x + gameNumbers.includes(z), 0);
-    if (compare(playerInputArr, gameNumbers) < 3) {
+    function compareNums() {
+        const playerInput = document.querySelector('input').value;
+        let playerInputArr = playerInput;
+        console.log(playerInputArr)
+        console.log("this is gameNums", gameNums)
+        if (playerInputArr === gameNums.textContent) {
+        gameNums.textContent = 'You got them all! Way to go, Einstein';
+        } else {
         gameNums.textContent = 'I bet you leave your keys in the fridge...';
-    } else if (compare(playerInputArr, gameNumbers) > 4) {
-        gameNums.textContent = 'You got them all!';
-    } else {
-        gameNums.textContent = '3 or 4 out of 5 aint so bad... Take your Ginko.';
+        }
     }
-}

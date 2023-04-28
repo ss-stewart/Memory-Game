@@ -83,10 +83,8 @@ TIMERT: Display in an element
 
 MESSAGES TO RENDER
   Game instructions
-  'Better take that ginko!'
   'Time's up!' 
   Win/Loss
-    'Think tou got it? Enter the numbers in the correct order' with thinking-emoji
     'I bet you leave your keys in the fridge...'
     'Way to go, Eintein!'
 
