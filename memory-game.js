@@ -8,6 +8,7 @@ const restartButton = document.getElementById('playAgainBtn');
 const checkAnsButton = document.getElementById('checkPlayAnsBtn');
 const gameNumbers = '';
 const playerInput = document.querySelector('#playerAnswer');
+const WinLossMsg = document.querySelector('#winlossMsg');
 
 // EVENT LISTENERS
 startButton.addEventListener('click', init);

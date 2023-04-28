@@ -1,5 +1,8 @@
 # Menory-Game
 
+Link to game
+https://ss-stewart.github.io/Memory-Game/
+
 Wireframe
 ![MG Wireframe 1](https://media.git.generalassemb.ly/user/48637/files/f4f61683-bdc6-4616-8f45-5cabd9550cf9)
 
@@ -21,6 +24,8 @@ User Stories
 
 Technologies Used
 1. CSS
+
+
 2. JS
 3. HTML
 
