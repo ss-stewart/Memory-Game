@@ -5,26 +5,20 @@
     <meta name="viewport" content="width=device-width">
     <title>Numbers Memory Game</title>
     <link href="memory-game.css" rel="stylesheet" type="text/css" />
-    <link href="../assets/smirking_emoji"/>
-    <link href="../assets/nerd_emoji"/>
-    <link href="../assets/dotted_line_emoji"/>
     <script defer src="memory-game.js"></script>
   </head>
   <body>
     <header style="background-color: rgba(6, 87, 70, 0.984)">Do You Remember?</header>
     <section>
       <button id="startGameBtn">Play!</button>
-      <p id="msg"> <!-- WHAT WAS TO GO HERE? --></p>
+      <p id="msg"></p>
       <div class="flip-container" style="background-color:whitesmoke">
         <div class="flipStyle">
             <div class="cardFront">
-              <!-- Remove next line --> 
               <div id="test"></div>
-                <!-- Rand Ints -->
+              <div id="WinLossMsg"></div>
             </div>
-            <div class="cardBack">
-                <!-- blank -->
-            </div>
+            <div class="cardBack"></div>
         </div>
       </div>
       <div id="timer"></div> 
@@ -35,4 +29,3 @@
     </section> 
   </body>
 </html> 
-
