@@ -24,8 +24,6 @@ User Stories
 
 Technologies Used
 1. CSS
-
-
 2. JS
 3. HTML
 

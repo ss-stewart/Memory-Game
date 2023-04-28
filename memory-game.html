@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Numbers Memory Game</title>
+    <link href="memory-game.css" rel="stylesheet" type="text/css" />
+    <script defer src="memory-game.js"></script>
+  </head>
+  <body>
+    <header style="background-color: rgba(6, 87, 70, 0.984)">Do You Remember?</header>
+    <section>
+      <button id="startGameBtn">Play!</button>
+      <p id="msg"></p>
+      <div class="flip-container" style="background-color:whitesmoke">
+        <div class="flipStyle">
+            <div class="cardFront">
+              <div id="gameNums"></div>
+              <div id="winLossMsg"></div>
+            </div>
+            <div class="cardBack"></div>
+        </div>
+      </div>
+      <div id="timer"></div> 
+      <input id="playerAnswer"/>
+      <p>Hit the button below to see how you did</p>
+      <button id="checkPlayAnsBtn">Did you get them right?</button>
+      <button id="playAgainBtn">Play again</button>
+    </section> 
+  </body>
+</html> 

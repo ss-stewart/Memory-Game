@@ -8,7 +8,6 @@ const restartButton = document.getElementById('playAgainBtn');
 const checkAnsButton = document.getElementById('checkPlayAnsBtn');
 const gameNumbers = '';
 const playerInput = document.querySelector('#playerAnswer');
-const WinLossMsg = document.querySelector('#winlossMsg');
 
 // EVENT LISTENERS
 startButton.addEventListener('click', init);
@@ -25,7 +24,6 @@ function init () {
 function generateNums () {
     console.log('functionRan')
     instructionMsg.style.display = 'block';
-    /////////// cardFront.innerHTML = fiveRandInt; /////////////////////
     // Create an empty array for 5 items
     var fiveRandInt = [];
     // Start a loop and run it 5 times        
@@ -58,10 +56,10 @@ function compareNums() {
     compare = (x, y) => playerInputArr.reduce((x, z) => x + gameNumbers.includes(z), 0);
     console.log(compare(playerInputArr, gameNumbers));
     if (compare(playerInputArr, gameNumbers) < 3) {
-        WinLossMsg.textContent = 'I bet you leave your keys in the fridge...';
+        gameNums.textContent = 'I bet you leave your keys in the fridge...';
     } else if (compare(playerInputArr, gameNumbers) > 4) {
-        WinLossMsg.textContent = 'You got them all!';
+        gameNums.textContent = 'You got them all!';
     } else {
-        WinLossMsg.textContent = '3 or 4 out of 5 aint so bad... Take your Ginko.';
+        gameNums.textContent = '3 or 4 out of 5 aint so bad... Take your Ginko.';
     }
 }
