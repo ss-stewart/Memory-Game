@@ -7,7 +7,6 @@ const startButton = document.getElementById('startGameBtn');
 const restartButton = document.getElementById('playAgainBtn');
 const checkAnsButton = document.getElementById('checkPlayAnsBtn');
 const gameNumbers = '';
-const playerInput = document.querySelector('input').value;
 
 // EVENT LISTENERS
 startButton.addEventListener('click', init);
@@ -20,8 +19,10 @@ function init () {
     generateNums(); 
     startTimer();
 }
+
 // get 5 random numbers
 function generateNums () {
+    console.log('functionRan')
     instructionMsg.style.display = 'block';
     // Create an empty array for 5 items
     var fiveRandInt = [];
@@ -41,21 +42,23 @@ function startTimer() {
         if (seconds < 0) {
             clearInterval(intervalId);
             timer.innerHTML = 'Time is up! Enter the numbers';
-            gameNums.textContent = '';
+            gameNums.style.display = 'none'
         }
     }, 1000);
 }    
-
+ 
 // Allow player to check their answer using a button
     // display conditional message to tell player how they did    
-    function compareNums() {
-        const playerInput = document.querySelector('input').value;
-        let playerInputArr = playerInput;
+function compareNums() {
+    gameNums.style.display = 'flex'
+    const playerInput = document.querySelector('input').value;
+    console.log(playerInput)
+    let playerInputArr = playerInput;
         console.log(playerInputArr)
         console.log("this is gameNums", gameNums)
-        if (playerInputArr === gameNums.textContent) {
+    if (playerInputArr === gameNums.textContent) {
         gameNums.textContent = 'You got them all! Way to go, Einstein';
-        } else {
+    } else {
         gameNums.textContent = 'I bet you leave your keys in the fridge...';
-        }
     }
+}
