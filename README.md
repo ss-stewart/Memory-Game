@@ -3,6 +3,9 @@
 Wireframe
 ![MG Wireframe 1](https://media.git.generalassemb.ly/user/48637/files/f4f61683-bdc6-4616-8f45-5cabd9550cf9)
 
+Screenshot of live game
+![Live Game Screenshot](./Live-Game-Screenshot.jpg)
+
 Numbers Memory Game
   The game allows players to test and build their memory retention, while having fun. The game presents users with a set of five random numbers that they must remember in their order before a displayed timer runs out. At the end of the timer, the cards flips so that the numbers are no longer visible. The user is then prompted to enter the numbers as they recall them and then check to see how accurate they were. The game will then display a message, letting the player know how well they did, along with the option to play again.
 
@@ -20,54 +23,60 @@ Technologies Used
 1. CSS
 2. JS
 3. HTML
-4. Emoji Library ?
 
 Pseudocode
-1. Store media sources: background (wikimedia commons), emoji for win/lose responses (open source, emoji library)
-2. Display game name in header, general 'how the game is played' in subheading, background media and 'play' button
-3. using randomInt, generate 5 integers from 99-999
-  . Display each random number on 1 of 5 cards
-  . Also display countown clock/timer 
-  . Display game instructions, 'you have <x> seconds to remember these number in the correct order'
-4. At end of countdown, display message 'Time's up!' and flip cards to white
-  . Display instructions/prompt, 'Think tou got it? Enter the numbers in the correct order' with thinking-emoji
-  . Display button with title, 'Click to see how you did!' 
-5. If player gets 4 or 5 correct, display message 'Way to go, Eintein! <nerd-emoji>'
-  . if 3, display message, 'I bet you leave your keys in the fridge... <smirk-emoji>'
-  . if less, display message, 'Better take that ginko! <no-face-emoji>'
-6. Display button 'Want to play again?'
-  . Click resets and restarts game
+1. Display game name in header, buttons and instructions as necessary
+2. Play Button does triggers these events
+  . Use randomInt, generate 5 integers between 0 and 99
+    - Display them on a card
+  . Launch countown clock/timer 
+  . Display game instructions
+3. At end of countdown, display message 'Time's up!' and hide the card/numbers
+  . Accept user response as input
+  . Allow button click to validate player answer
+  . Based on win/loss logic, display message to let player know how well they scored
+4. Allow player to restart the game
+  . use a click event
 
-Variables
-  card: front and back
-  timer: endOfTimer, setInterval, startTime, seconds
+Cached Variables (constants)
+. test 
+. cardFront 
+. timer 
+. instructionMsg
+. startButton 
+. restartButton 
+. checkAnsButton 
+. gameNumbers 
+. playerInput 
 
-Buttons
-  Play!, Did you get them right? Play Again
-  Hover with cursor pointer
+Buttons (hover with cursor- pointer)
+  Play!
+  Did you get them right? 
+  Play Again
 
 Card
-  Divs that display the random integers
-  flip to back side at end of timer
+  Div that display the random integers
+  Hides display on trigger
 
 Functions
-  onClick() - start game, submit player results for validation
-  render - game generated numbers and event messages
-  math.Random() - select numbers for player
-  if/else - validate player response, end of timer
-  document.getelementbyid() 
+  eventListener() - player clicks
+  textContent - game generated numbers and event messages
+  math.Random(), generateNums() - generate game numbers 
+  if/else - validate player response, end of timer, 
+  compare, compareNums, 
+  startTimer - runs timer in window  
   init - resets and restarts game upon click event
-  '===' to validates player responses
 
 Timer: Display in an element
 
 Messages to render
-  Game instructions after play button is clicked
-  'Better take that ginko! <no-face-emoji>'
-  'Time's up!' and flip card
-  'Display instructions/prompt, 'Think tou got it? Enter the numbers in the correct order' with thinking-emoji
-  'I bet you leave your keys in the fridge... <smirk-emoji>'
-  'Way to go, Eintein! <nerd-emoji>'
+  Game instructions
+  'Better take that ginko!'
+  'Time's up!' 
+  Win/Loss
+    'Think tou got it? Enter the numbers in the correct order' with thinking-emoji
+    'I bet you leave your keys in the fridge...'
+    'Way to go, Eintein!'
 
 Icebox
   . Add more levels: more numbers to remember and less time on the countdown clock

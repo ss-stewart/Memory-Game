@@ -1,5 +1,5 @@
 // CACHED VARIABLES
-const test = document.getElementById('test');
+const gameNums = document.getElementById('gameNums');
 const cardFront = document.getElementsByClassName('cardFront');
 const timer = document.querySelector('#timer');
 const instructionMsg = document.getElementById("msg");
@@ -14,16 +14,11 @@ startButton.addEventListener('click', init);
 restartButton.addEventListener('click', init);
 checkAnsButton.addEventListener('click', compareNums);
 
-// how to change instruction msg (if ... write the following code)
-// instructionMessage.innerHTML = "new message"
-
 // play button must start the timer and generate random numbers
 function init () {
     instructionMsg.style.display = 'none';
     generateNums(); 
     startTimer();
-    // flip card[Div] to display fiveRandInt
-    /////// document.querySelector("cardFront").classList.toggle("flip"); ///////////////////// reuse
 }
 // get 5 random numbers
 function generateNums () {
@@ -36,7 +31,7 @@ function generateNums () {
     for(i = 0; i < 5; i++) {
         fiveRandInt[i] = Math.floor( Math.random() * 99);
     }
-    test.textContent = 'Remember these numbers in the order they appear: ' + fiveRandInt;
+    gameNums.textContent = 'Remember these numbers in the order they appear: ' + fiveRandInt;
     console.log(fiveRandInt);        
     console.log(cardFront);
 }
@@ -50,7 +45,7 @@ function startTimer() {
         if (seconds < 0) {
             clearInterval(intervalId);
             timer.innerHTML = 'Time is up! Enter the numbers';
-            test.textContent = '';
+            gameNums.textContent = '';
         }
     }, 1000);
 }    
