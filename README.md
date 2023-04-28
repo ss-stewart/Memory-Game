@@ -3,11 +3,8 @@
 Wireframe
 ![MG Wireframe 1](https://media.git.generalassemb.ly/user/48637/files/f4f61683-bdc6-4616-8f45-5cabd9550cf9)
 
-Finished Game display
-
-
 Numbers Memory Game
-  The game allows players to test and build their memory retention, with a fun feel. The game presents users with a set of five random numbers that they must remember in their order before a displayed timer runs out. At the end of the timer, the cards flips so that the numbers are no longer visible. The user is then prompted to enter the numbers as they recall them and then check to see how accurate they were. The game will then display a message, letting the player know how well they did, along with the option to play again.
+  The game allows players to test and build their memory retention, while having fun. The game presents users with a set of five random numbers that they must remember in their order before a displayed timer runs out. At the end of the timer, the cards flips so that the numbers are no longer visible. The user is then prompted to enter the numbers as they recall them and then check to see how accurate they were. The game will then display a message, letting the player know how well they did, along with the option to play again.
 
 User Stories
 1. I want to see a visually appealing game that tells me what the game is
@@ -23,8 +20,7 @@ Technologies Used
 1. CSS
 2. JS
 3. HTML
-4. Emoji Library
-5. Wikimedia Commons
+4. Emoji Library ?
 
 Pseudocode
 1. Store media sources: background (wikimedia commons), emoji for win/lose responses (open source, emoji library)
@@ -50,9 +46,9 @@ Buttons
   Play!, Did you get them right? Play Again
   Hover with cursor pointer
 
-Cards
+Card
   Divs that display the random integers
-  flip to black side at end of timer
+  flip to back side at end of timer
 
 Functions
   onClick() - start game, submit player results for validation
@@ -66,18 +62,17 @@ Functions
 Timer: Display in an element
 
 Messages to render
-   Game instructions after play button is clicked
+  Game instructions after play button is clicked
   'Better take that ginko! <no-face-emoji>'
-  'Time's up!' and flip cards to white
+  'Time's up!' and flip card
   'Display instructions/prompt, 'Think tou got it? Enter the numbers in the correct order' with thinking-emoji
   'I bet you leave your keys in the fridge... <smirk-emoji>'
   'Way to go, Eintein! <nerd-emoji>'
 
-  
 Icebox
   . Add more levels: more numbers to remember and less time on the countdown clock
-  . Better graphics
+  . Better visual, eg. animated background
   . Ability to play against others
   . Option to get clues
   . Ability to keep track of wins overtime
-  . Ability to share their success on social media
+  . Ability to share success on social media
