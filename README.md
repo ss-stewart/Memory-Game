@@ -1,18 +1,27 @@
 # Menory-Game
 
-Link to game
+LINK TO GAME
 https://ss-stewart.github.io/Memory-Game/
 
-Wireframe
+WIREFRAME
 ![MG Wireframe 1](https://media.git.generalassemb.ly/user/48637/files/f4f61683-bdc6-4616-8f45-5cabd9550cf9)
 
-Screenshot of live game
-![Live Game Screenshot](./Live-Game-Screenshot.jpg)
+LIVE GAME (visual)
 
-Numbers Memory Game
+Start screen
+![Game_Start Screen](./Game_start-screen.png)
+
+Game's first response screen
+![Game After Play](./Game-after-PLAY.png)
+
+Win/Loss screen
+![Game After Win or Loss](./Game-After-WinLoss.png)
+
+
+NUMBERS MEMORY GAME
   The game allows players to test and build their memory retention, while having fun. The game presents users with a set of five random numbers that they must remember in their order before a displayed timer runs out. At the end of the timer, the cards flips so that the numbers are no longer visible. The user is then prompted to enter the numbers as they recall them and then check to see how accurate they were. The game will then display a message, letting the player know how well they did, along with the option to play again.
 
-User Stories
+USER STORIES
 1. I want to see a visually appealing game that tells me what the game is
 2. I want to be be able to start the game, with a click
 3. I want to see clear instructions or prompts on how to play
@@ -22,12 +31,12 @@ User Stories
 7. I want to be able to see how well I did
 8. I want the option to play again
 
-Technologies Used
+TECHNOLOGIES USED
 1. CSS
 2. JS
 3. HTML
 
-Pseudocode
+PSEUDOCODE
 1. Display game name in header, buttons and instructions as necessary
 2. Play Button does triggers these events
   . Use randomInt, generate 5 integers between 0 and 99
@@ -41,7 +50,7 @@ Pseudocode
 4. Allow player to restart the game
   . use a click event
 
-Cached Variables (constants)
+CACHED VARIABLES (constants)
 . test 
 . cardFront 
 . timer 
@@ -52,16 +61,16 @@ Cached Variables (constants)
 . gameNumbers 
 . playerInput 
 
-Buttons (hover with cursor- pointer)
+BOTTONS (hover with cursor- pointer)
   Play!
   Did you get them right? 
   Play Again
 
-Card
+CARD
   Div that display the random integers
   Hides display on trigger
 
-Functions
+FUNCTIONS
   eventListener() - player clicks
   textContent - game generated numbers and event messages
   math.Random(), generateNums() - generate game numbers 
@@ -70,9 +79,9 @@ Functions
   startTimer - runs timer in window  
   init - resets and restarts game upon click event
 
-Timer: Display in an element
+TIMERT: Display in an element
 
-Messages to render
+MESSAGES TO RENDER
   Game instructions
   'Better take that ginko!'
   'Time's up!' 
@@ -81,10 +90,11 @@ Messages to render
     'I bet you leave your keys in the fridge...'
     'Way to go, Eintein!'
 
-Icebox
+ICEBOX
   . Add more levels: more numbers to remember and less time on the countdown clock
-  . Better visual, eg. animated background
+  . More media, eg. animated background, notification sounds
   . Ability to play against others
   . Option to get clues
   . Ability to keep track of wins overtime
   . Ability to share success on social media
+  . Buttons display and disappear until/when needed

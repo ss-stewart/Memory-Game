@@ -7,7 +7,7 @@ const startButton = document.getElementById('startGameBtn');
 const restartButton = document.getElementById('playAgainBtn');
 const checkAnsButton = document.getElementById('checkPlayAnsBtn');
 const gameNumbers = '';
-const playerInput = document.querySelector('#playerAnswer').value;
+const playerInput = document.querySelector('input').value;
 
 // EVENT LISTENERS
 startButton.addEventListener('click', init);
@@ -22,7 +22,6 @@ function init () {
 }
 // get 5 random numbers
 function generateNums () {
-    console.log('functionRan')
     instructionMsg.style.display = 'block';
     // Create an empty array for 5 items
     var fiveRandInt = [];
@@ -51,8 +50,8 @@ function startTimer() {
     // display conditional message to tell player how they did    
 function compareNums() {
     let playerInputArr = [playerInput];
+    console.log('this is player nums', playerInput)
     compare = (x, y) => playerInputArr.reduce((x, z) => x + gameNumbers.includes(z), 0);
-    console.log(compare(playerInputArr, gameNumbers));
     if (compare(playerInputArr, gameNumbers) < 3) {
         gameNums.textContent = 'I bet you leave your keys in the fridge...';
     } else if (compare(playerInputArr, gameNumbers) > 4) {
