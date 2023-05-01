@@ -44,20 +44,20 @@ div {
   margin: auto;
 }
 
-.flip-container {
+/* .flip-container {
   perspective: 1000px;
-}
+} */
 
 .flip-container, .cardFront, .cardBack {
   width: 450px;
   height: 100px;
 }
 
-.flipStyle {
+/* .flipStyle {
   transition: 0.5s;
   transform-style: preserve-3d;
   position: relative;
-}
+} */
 
 .cardFront, .cardBack {
   backface-visibility: hidden;
@@ -70,11 +70,11 @@ div {
   display: flex;
 }
 
-.cardBack {
+/* .cardBack {
   transform: rotateY(180deg);
   background-color: black;
   z-index: -2;
-}
+} */
 
 #playerAnswer {
   color: blue;

@@ -21,6 +21,14 @@ Win/Loss screen
 NUMBERS MEMORY GAME
   The game allows players to test and build their memory retention, while having fun. The game presents users with a set of five random numbers that they must remember in their order before a displayed timer runs out. At the end of the timer, the cards flips so that the numbers are no longer visible. The user is then prompted to enter the numbers as they recall them and then check to see how accurate they were. The game will then display a message, letting the player know how well they did, along with the option to play again.
 
+User/Player Instructions
+- To start the game, click the 'play' button
+- The game will load 5 integers with a timer conting down from 10 seconds. Along with this, the player with be instructed to remember those numbers.
+- At the end of the timer, a message will appear, in place of the timer, letting the user know that their time is up and they must enter the numbers that had been provided. 
+- The user must do this and then click the 'Did You Get Them Right?' button.
+- The game will then generate a message letting them know how they did.
+- Using the 'Play Again' button, the user can play the game again
+
 USER STORIES
 1. I want to see a visually appealing game that tells me what the game is
 2. I want to be be able to start the game, with a click
@@ -52,7 +60,6 @@ PSEUDOCODE
 
 CACHED VARIABLES (constants)
 . test 
-. cardFront 
 . timer 
 . instructionMsg
 . startButton 
@@ -89,10 +96,9 @@ MESSAGES TO RENDER
     'Way to go, Eintein!'
 
 ICEBOX
-  . Add more levels: more numbers to remember and less time on the countdown clock
-  . More media, eg. animated background, notification sounds
-  . Ability to play against others
-  . Option to get clues
-  . Ability to keep track of wins overtime
-  . Ability to share success on social media
-  . Buttons display and disappear until/when needed
+  * I would like for there to be more levels, increasing in difficulty
+  * It would be great if there was more audio/visual media to make the game more fun, such as game sounds and animation
+  * It would be fun to make the game more social, allowing gamers to play against others
+  * In the same vein, I would like to add the ability to track and share success on social media
+  * There could be the option to get clues and hints
+  * With more to make advancements, I woul deventually like to add buttons display and disappear until/when needed

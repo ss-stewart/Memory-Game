@@ -1,6 +1,5 @@
 // CACHED VARIABLES
 const gameNums = document.getElementById('gameNums');
-const cardFront = document.getElementsByClassName('cardFront');
 const timer = document.querySelector('#timer');
 const instructionMsg = document.getElementById("msg");
 const startButton = document.getElementById('startGameBtn');
@@ -22,7 +21,7 @@ function init () {
 
 // get 5 random numbers
 function generateNums () {
-    console.log('functionRan')
+    console.log('functionRan');
     instructionMsg.style.display = 'block';
     // Create an empty array for 5 items
     var fiveRandInt = [];
@@ -42,7 +41,7 @@ function startTimer() {
         if (seconds < 0) {
             clearInterval(intervalId);
             timer.innerHTML = 'Time is up! Enter the numbers';
-            gameNums.style.display = 'none'
+            gameNums.style.display = 'none';
         }
     }, 1000);
 }    
@@ -50,12 +49,12 @@ function startTimer() {
 // Allow player to check their answer using a button
     // display conditional message to tell player how they did    
 function compareNums() {
-    gameNums.style.display = 'flex'
+    gameNums.style.display = 'flex';
     const playerInput = document.querySelector('input').value;
-    console.log(playerInput)
+    console.log(playerInput);
     let playerInputArr = playerInput;
-        console.log(playerInputArr)
-        console.log("this is gameNums", gameNums)
+        console.log(playerInputArr);
+        console.log("this is gameNums", gameNums);
     if (playerInputArr === gameNums.textContent) {
         gameNums.textContent = 'You got them all! Way to go, Einstein';
     } else {
